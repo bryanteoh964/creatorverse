@@ -1,10 +1,11 @@
 import React from 'react'
 import Card from '../components/Card.jsx'
+import Nav from '../components/Nav.jsx'
 
 const ShowCreators = () => {
   return (
     <div>
-
+      <Nav />
       <div class="grid">
             <Card />
             <Card />

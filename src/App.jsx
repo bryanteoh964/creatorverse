@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 
-import Home from './pages/Home.jsx'
 import AddCreator from './pages/AddCreator.jsx'
 import EditCreator from './pages/EditCreator.jsx'
 import ShowCreators from './pages/ShowCreators.jsx'
@@ -13,25 +12,19 @@ function App() {
   let element = useRoutes([
     {
       path: "/",
-      element: <Home />,
-      children: [
-        {
-          path: "/add_creators",
-          element: <AddCreator />
-        },
-        {
-          path: "/edit_creators",
-          element: <EditCreator />
-        },
-        {
-          path: "/show_creators",
-          element: <ShowCreators />
-        }, 
-        {
-          path: "/view_creators",
-          element: <ViewCreator />
-        }
-      ]
+      element: <ShowCreators />,
+    }, 
+    {
+      path: "/add",
+      element: <AddCreator />,
+    },
+    {
+      path: "/edit",
+      element: <EditCreator />,
+    },
+    {
+      path: "/creator/:id",
+      element: <ViewCreator />,
     }
   ])
   return element

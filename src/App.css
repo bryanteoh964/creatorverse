@@ -4,3 +4,19 @@
   padding: 2rem;
   text-align: center;
 }
+
+article {
+  border: 1px solid black;
+}
+
+.card {
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}

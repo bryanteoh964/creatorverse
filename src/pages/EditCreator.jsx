@@ -1,8 +1,12 @@
 import React from 'react'
+import Nav from '../components/Nav'
 
 const EditCreator = () => {
   return (
-    <div>EditCreator</div>
+    <div>
+      <Nav />
+      <h1>Edit Creator</h1>
+    </div>
   )
 }
 
