@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '@picocss/pico/css/pico.min.css'
 
 const Nav = () => {
   return (

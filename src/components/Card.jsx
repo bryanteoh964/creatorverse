@@ -1,15 +1,17 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
+  console.log("Hip:", props)
+  console.log("Hop:", props.name)
   return (
     <div>
       <article class="card">
         <img
-          src="https://images.pexels.com/photos/70069/pexels-photo-70069.jpeg"
+          src={props.imageURL}
         />
-        <h3>Creator Name</h3>
-        <h5>URL</h5>
-        <span>Description</span>
+        <h3>Creator Name: {props.name}</h3>
+        <h5>URL: {props.url}</h5>
+        <span>Description: {props.description}</span>
       </article>
     </div>
   )
