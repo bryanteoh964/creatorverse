@@ -21,7 +21,6 @@ const ShowCreators = () => {
 
 	let navigate = useNavigate();
 	const routeChange = (creator_id) => {
-		console.log('clicked')
 		let path = `/creator/` + `${creator_id}`;
 		navigate(path)
 	}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import { supabase } from '../client.js'
 import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import youtubeLogo from '../assets/YouTube.png'
 
 import '../App.css'
@@ -28,6 +29,24 @@ const ViewCreator = (props) => {
     fetchCreatorData();
   }, [])
 
+  let navigate = useNavigate();
+  const deleteCreator = async () => {
+    console.log("Creator deleted")
+
+    const { data, error } = await supabase
+      .from('creators')
+      .delete()
+      .eq('id', creatorId.id);
+
+    if (error) {
+      console.log("Error deleting creator:", error);
+    } else {
+      console.log("Successfully deleted creator:", data);
+      let path = `/`;
+      navigate(path)
+    }
+  }
+
   return (
     <div>
       <Nav />
@@ -48,7 +67,7 @@ const ViewCreator = (props) => {
               <p class="card-text">{creatorData.description}</p>
               <div class="grid">
                 <a href={`/edit/${creatorId.id}`} role="button" class="secondary">Edit</a>
-                <a href="#" role="button" className="delete-button">Delete</a>
+                <a href="#" role="button" className="delete-button" onClick={() => deleteCreator()}>Delete</a>
               </div>
             </div>
           </div>
