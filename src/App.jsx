@@ -19,7 +19,7 @@ function App() {
       element: <AddCreator />,
     },
     {
-      path: "/edit",
+      path: "/edit/:id",
       element: <EditCreator />,
     },
     {

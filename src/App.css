@@ -20,3 +20,29 @@ article {
 .card:hover {
   transform: scale(1.01);
 }
+
+h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.yt-icon {
+  height: 40px;
+  margin: 0 auto;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button{
+  background-color: #e53935;
+}
+.delete-button:hover{
+  background-color: #c9302c;
+}
