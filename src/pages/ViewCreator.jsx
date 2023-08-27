@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../components/Nav'
+import '@picocss/pico/css/pico.min.css'
 
 const ViewCreator = () => {
   return (

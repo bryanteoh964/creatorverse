@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { supabase } from '../client.js'
+import { useNavigate } from 'react-router-dom'
 
 import Card from '../components/Card.jsx'
 import Nav from '../components/Nav.jsx'
@@ -17,11 +18,12 @@ async function fetchUsers() {
 
 const ShowCreators = () => {
 	const [creators, setCreators] = useState([]);
-	const prop1 = {
-		name: "Mr.Beast",
-		url: "https://www.youtube.com/user/MrBeast6000",
-		description: "Jimmy Donaldson (born May 7, 1998), more commonly known by his online alias MrBeast, is an American YouTuber notable for his expensive stunts and philanthropy. He has been credited with pioneering a genre of YouTube videos that center on expensive stunts. He is also the co-creator of Team Trees, a fundraiser for the Arbor Day Foundation, which has raised over $22 million.",
-		imageURL: "https://e1.pxfuel.com/desktop-wallpaper/23/31/desktop-wallpaper-mrbeast-logo-with-text-png-mr-beast-logo.jpg"
+
+	let navigate = useNavigate();
+	const routeChange = (creator_id) => {
+		console.log('clicked')
+		let path = `/creator/` + `${creator_id}`;
+		navigate(path)
 	}
 
 	useEffect(() => {
@@ -35,15 +37,10 @@ const ShowCreators = () => {
 	return (
 		<div>
 			<Nav />
-			{/* <div class="grid">
-				<Card {... prop1}/>
-				<Card />
-			</div> */}
 			<div>
-				<h2>Creators List:</h2>
 				<ul class="grid">
 					{creators.map(creator => (
-						<div>
+						<div onClick={() => routeChange(creator.id)}>
 							<Card 
 								name={creator.name}
 								url={creator.url}

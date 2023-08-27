@@ -1,8 +1,6 @@
 import React from 'react'
 
 const Card = (props) => {
-  console.log("Hip:", props)
-  console.log("Hop:", props.name)
   return (
     <div>
       <article class="card">
