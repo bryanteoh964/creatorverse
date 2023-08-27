@@ -6,10 +6,12 @@ const Card = (props) => {
       <article class="card">
         <img
           src={props.imageURL}
+          className="card-img"
         />
-        <h3>Creator Name: {props.name}</h3>
-        <h5>URL: {props.url}</h5>
-        <span>Description: {props.description}</span>
+        <div class="grid">
+          <h3>{props.name}</h3>
+        </div>
+        <span>{props.description}</span>
       </article>
     </div>
   )

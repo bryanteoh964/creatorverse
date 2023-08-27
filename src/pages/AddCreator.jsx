@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { supabase } from '../client.js'
+import { useNavigate } from 'react-router-dom'
+
 import Nav from '../components/Nav'
+
 import '@picocss/pico/css/pico.min.css'
 
 const AddCreator = () => {
@@ -8,6 +11,8 @@ const AddCreator = () => {
 	const [imgUrl, setImgUrl] = useState('')
 	const [description, setDescription] = useState('')
 	const [mediaLink, setMediaLink] = useState('')
+	
+	let navigate = useNavigate();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -24,6 +29,8 @@ const AddCreator = () => {
             setImgUrl('');
             setDescription('');
             setMediaLink('');
+			let path = `/`;
+			navigate(path)
 		}
 	}
 
@@ -71,7 +78,7 @@ const AddCreator = () => {
 						/>
 					</label>
 				</fieldset>
-				<input type="submit" value="Submit" />
+				<input type="submit" value="Submit"/>
 			</form>
 		</div>
 	)

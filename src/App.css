@@ -3,27 +3,67 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Segoe UI', 'Fira Sans';
 }
 
 article {
   border: 1px solid black;
 }
 
+.nav-bar {
+  height: 60px;
+  border-bottom: 1px solid black;
+}
+
 .card {
   background-color: rgb(244, 244, 244);
   border-radius: 10px;
+  height: 364px;
   padding: 20px;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 0px;
+  overflow: hidden;
 }
-
 .card:hover {
   transform: scale(1.01);
 }
+.card-img {
+  width: 400px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
+h1 {
+  font-family: 'Fira Sans';
+  font-size: 70px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  color: #333;
+}
 h3 {
   margin: 0;
   margin-bottom: 10px;
+}
+span {
+  font-size: 16px;
+  color: grey;
+}
+
+.gallery-card {
+  width: 48%;
+  margin: 0px 10px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 98%;
+  align-items: stretch;
+}
+.gallery-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .yt-icon {

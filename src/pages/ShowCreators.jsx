@@ -36,10 +36,10 @@ const ShowCreators = () => {
 	return (
 		<div>
 			<Nav />
-			<div>
-				<ul class="grid">
+			<div className="gallery-container">
+				<ul className="gallery">
 					{creators.map(creator => (
-						<div onClick={() => routeChange(creator.id)}>
+						<div className="gallery-card" onClick={() => routeChange(creator.id)}>
 							<Card 
 								name={creator.name}
 								url={creator.url}
