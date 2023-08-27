@@ -4,7 +4,7 @@ Submitted by: **Bryan Teoh**
 
 About this web app: **CreatorVerse is a user-manageable, content creator gallery where users can bookmark their favorite creators. CreatorVerse is a full stack application with a frontend that can interact with an API and supports CRUD operations to a Supabase database.**
 
-Time spent: **14** hours
+Time spent: **15** hours
 
 ## Required Features
 
@@ -25,9 +25,6 @@ The following **optional** features are implemented:
 - [X] The content creator items are displayed in a creative format, like cards instead of a list
 - [X] An image of each content creator is shown on their content creator card
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
@@ -39,7 +36,10 @@ Here's a walkthrough of implemented required features:
 GIF created with ScreenToGif
 
 ## Notes
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+- Initial steps to access databse were difficult, such as reading from and writing to Supabase
+- Passing information between props took was a bit troublesome
+- Designing the CSS for cards and individual creator pages took a while to get right
+- Learning for the first time routing and redirects was tricky, but I thought it was pretty cool once it was set up
 
 ## License
 Copyright [2023] [Bryan Teoh]
