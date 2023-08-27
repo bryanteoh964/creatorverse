@@ -30,8 +30,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://imgur.com/gallery/EnTg2DD' />
-<img src='http://imgur.com/gallery/EnTg2DD.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Creatorverse (resized)](https://github.com/bryanteoh964/creatorverse/assets/68241796/d3893f2b-938c-48b9-9d97-9acfd7d09db7)
+Link to imgur: https://imgur.com/a/ErTYnMp
 
 GIF created with ScreenToGif
 
