@@ -47,7 +47,7 @@ const ViewCreator = (props) => {
               </div>
               <p class="card-text">{creatorData.description}</p>
               <div class="grid">
-                <a href="#" role="button" class="secondary">Edit</a>
+                <a href={`/edit/${creatorId.id}`} role="button" class="secondary">Edit</a>
                 <a href="#" role="button" className="delete-button">Delete</a>
               </div>
             </div>
